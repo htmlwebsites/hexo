@@ -125,7 +125,7 @@ More info: [Gravatar](https://en.gravatar.com/site/implement/images/)
 
 ### css
 
-Loads CSS files. `path` can be an array or a string. `path` can be a string, an array, an object or an array of objects. [`/<root>/`](/docs/configuration#URL) value is prepended while `.css` extension is appended to the `path` automatically. Use object type for custom attributes.
+Loads CSS files. `path` can be a string, an array, an object or an array of objects. [`/<root>/`](/docs/configuration#URL) value is prepended while `.css` extension is appended to the `path` automatically. Use object type for custom attributes.
 
 ```js
 <%- css(path, ...) %>
@@ -681,7 +681,7 @@ Inserts a list of all tags.
 
 | Option       | Description                                                                                                             | Default |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------- | ------- |
-| `orderby`    | Order of categories                                                                                                     | name    |
+| `orderby`    | Order of tags                                                                                                           | name    |
 | `order`      | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending                                                    | 1       |
 | `show_count` | Display the number of posts for each tag                                                                                | true    |
 | `style`      | Style to display the tag list. `list` displays tags in an unordered list. Use `false` or any other value to disable it. | list    |
@@ -945,18 +945,19 @@ Parses all heading tags (h1~h6) in the content and inserts a table of contents.
 <%- toc(str, [options]) %>
 ```
 
-| Option                  | Description                            | Default           |
-| ----------------------- | -------------------------------------- | ----------------- |
-| `class`                 | Class name                             | `toc`             |
-| `class_item` (+6.3.0)   | Class name of item                     | `${class}-item`   |
-| `class_link` (+6.3.0)   | Class name of link                     | `${class}-link`   |
-| `class_text` (+6.3.0)   | Class name of text                     | `${class}-text`   |
-| `class_child` (+6.3.0)  | Class name of child                    | `${class}-child`  |
-| `class_number` (+6.3.0) | Class name of number                   | `${class}-number` |
-| `class_level` (+6.3.0)  | Class name prefix of level             | `${class}-level`  |
-| `list_number`           | Displays list number                   | true              |
-| `max_depth`             | Maximum heading depth of generated toc | 6                 |
-| `min_depth`             | Minimum heading depth of generated toc | 1                 |
+| Option                  | Description                              | Default           |
+| ----------------------- | ---------------------------------------- | ----------------- |
+| `class`                 | Class name                               | `toc`             |
+| `class_item` (+6.3.0)   | Class name of item                       | `${class}-item`   |
+| `class_link` (+6.3.0)   | Class name of link                       | `${class}-link`   |
+| `class_text` (+6.3.0)   | Class name of text                       | `${class}-text`   |
+| `class_child` (+6.3.0)  | Class name of child                      | `${class}-child`  |
+| `class_number` (+6.3.0) | Class name of number                     | `${class}-number` |
+| `class_level` (+6.3.0)  | Class name prefix of level               | `${class}-level`  |
+| `list_number`           | Displays list number                     | true              |
+| `max_depth`             | Maximum heading depth of generated toc   | 6                 |
+| `min_depth`             | Minimum heading depth of generated toc   | 1                 |
+| `max_items` (+7.3.0)    | Maximum number of items in generated toc | `Infinity`        |
 
 **Examples:**
 

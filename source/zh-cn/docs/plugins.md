@@ -10,12 +10,11 @@ Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心
 
 ### 插件（Packages）
 
-If your code is complicated or if you want to publish it to the NPM registry, we recommend using a plugin. First, create a folder in the `node_modules` folder. The name of this folder must begin with `hexo-` or Hexo will ignore it.
+如果您的代码很复杂或者您想将其发布到 NPM，建议使用插件。 首先，在`node_modules`文件夹中创建一个文件夹。 该文件夹的名称必须以 `hexo-` 开头，否则 Hexo 将忽略它。
 
 文件夹内至少要包含 2 个文件：一个是主程序，另一个是 `package.json`，描述插件的用途和所依赖的插件。
 
 ```plain
-.
 .
 ├── index.js
 └── package.json
@@ -31,7 +30,7 @@ If your code is complicated or if you want to publish it to the NPM registry, we
 }
 ```
 
-You'll also need to list your plugin as a dependency in the root `package.json` of your hexo instance in order for Hexo to detect and load it.
+您还需要将您的插件列在您的 hexo 项目实例根目录下的 `package.json` 文件中的依赖项中，以便 Hexo 检测并加载它。
 
 ### 工具
 
@@ -46,7 +45,7 @@ You'll also need to list your plugin as a dependency in the root `package.json` 
 
 当您完成插件后，可以考虑将它发布到 [插件列表](/plugins)，让更多人能够使用您的插件。 发布插件的步骤和 [更新文档](contributing.html#更新文档) 非常类似。
 
-1. Fork [hexojs/site][]
+1. 复刻 [hexojs/site][]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
    ```shell
@@ -57,10 +56,9 @@ You'll also need to list your plugin as a dependency in the root `package.json` 
 
 3. 在 `source/_data/plugins/` 中创建一个新的 yaml 文件，使用您的插件名称作为文件名。
 
-4. Edit `source/_data/plugins/<your-plugin-name>.yml` and add your plugin. For example:
+4. 编辑 `source/_data/plugins/<your-plugin-name>.yml` 并添加您的插件。 例如：
 
    ```yaml
-   description: Server module for Hexo.
    description: Server module for Hexo.
    link: https://github.com/hexojs/hexo-server
    tags:
