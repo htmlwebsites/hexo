@@ -1,0 +1,9 @@
+description: A Hexo plugin that automatically loads cross-domain images through a proxy server, addressing image access restrictions and improving performance.
+link: https://github.com/Aixbox/hexo-image-proxy
+tags:
+  - image
+  - proxy
+  - cross-domain
+  - image-proxy
+  - cdn
+  - cors
